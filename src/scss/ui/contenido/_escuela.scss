@@ -1,0 +1,30 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.notwebp.notavif .escuela {
+    @include m.bgImage('.jpg', null, true);
+}
+.webp .escuela {
+    @include m.bgImage('.webp', null, true);
+}
+.avif .escuela {
+    @include m.bgImage('.avif', null, true);
+}
+
+.escuela {
+    padding: 20rem 0;
+    text-align: center;
+    color: v.$blanco;
+
+    &__heading {
+        font-weight: 700;
+    }
+    &__texto {
+        font-size: 2.6rem;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+    &__enlace {
+        @include m.boton(v.$primario, v.$blanco);
+    }
+}

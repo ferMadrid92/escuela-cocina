@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.notavif.notwebp .nosotros {
+    &__heading {
+        @include m.heading('png');
+    }
+}
+.webp .nosotros {
+    &__heading {
+        @include m.heading('webp');
+    }
+}
+.avif .nosotros {
+    &__heading {
+        @include m.heading('avif');
+    }
+}
+
+.nosotros {
+    padding: 5rem 0;
+    &__grid {
+        @include m.tablet { 
+            @include m.grid(3, 2rem);
+        }
+    }
+    &__bloque {
+        text-align: center;
+    }
+    &__imagen {
+        margin: 0 auto;
+    }
+}
